@@ -1,0 +1,121 @@
+// .header-section {
+//   width: 100%;
+//   padding: 20px 0;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 10;
+
+//   .header-inner {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     .logo a {
+//       font-size: 24px;
+//       font-weight: 700;
+//       color: white;
+//       text-decoration: none;
+//     }
+
+//     .main-nav ul {
+//       list-style: none;
+//       display: flex;
+//       gap: 20px;
+
+//       li a {
+//         color: white;
+//         text-decoration: none;
+//         font-weight: 500;
+//         font-size: 16px;
+
+//         &:hover {
+//           text-decoration: underline;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.header-section {
+  position: absolute; /* OR use 'fixed' if you want sticky effect */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  background: transparent;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.logo img {
+  width: 130px;
+}
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+}
+.menu-toggle img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Full screen overlay */
+.mobile-nav-outer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95); /* ✅ Add this line */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.mobile-nav-outer.active {
+  display: flex;
+}
+
+.mobile-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.mobile-nav li {
+  margin: 20px 0;
+}
+.mobile-nav li a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.close-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ✅ Show hamburger for ALL screen sizes */
+@media (min-width: 0) {
+  .main-nav {
+    display: none !important;
+  }
+}

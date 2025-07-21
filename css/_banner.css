@@ -1,0 +1,105 @@
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 1072px;
+}
+.banner-section .banner-bg {
+  background: url("../images/banner.png") no-repeat center center/cover;
+  height: 1072px;
+  position: relative;
+  background-size: auto;
+}
+.banner-section .banner-bg .banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.banner-section .banner-bg .banner-overlay .banner-content h1 {
+  font-size: 5vw;
+  font-weight: 400;
+  max-width: 1000px;
+  line-height: 1.2;
+}
+.banner-section .banner-bg .banner-overlay .banner-content .connect-btn {
+  margin-top: 2rem;
+  width: 100px;
+  height: 100px;
+  background-color: #80c342;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.banner-section .banner-bg .banner-overlay .banner-content .connect-btn span {
+  display: block;
+  font-size: 10px;
+  margin-top: 2px;
+}
+.banner-section .banner-bg .banner-overlay .banner-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 12px;
+}
+.banner-section .banner-bg .banner-overlay .banner-bottom .banner-bottom-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.banner-section .banner-bg .banner-overlay .banner-bottom .trust-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.banner-section .banner-bg .banner-overlay .banner-bottom .trust-info h5 {
+  font-family: "inter";
+  font-size: 1.8rem;
+  margin-right: 10px;
+  font-weight: 400;
+}
+.banner-section .banner-bg .banner-overlay .banner-bottom .trust-info strong {
+  font-weight: 700;
+}
+.banner-section .banner-bg .banner-overlay .banner-bottom .awards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.banner-section .banner-bg .banner-overlay .banner-bottom .awards img {
+  height: 40px;
+  width: auto;
+}
+/*# sourceMappingURL=_banner.css.map */

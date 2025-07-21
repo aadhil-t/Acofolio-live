@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;	
+  overflow-x: hidden;
+  color: $white-color;
+  background: $primary-color;
+  cursor: default;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+  	font-size: 1.8rem;
+	color: $white-color;
+;
+}
+
+
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 38px;
+  margin: 0 auto;
+}
+
+/* Responsive padding for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+
+h1,h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 0.5em;
+	padding-bottom: 0;
+}
+ul,ol {
+	margin: 0 0 1em 0.75em;
+	padding: 0 0 1em 0.75em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+
+h1{
+	font-size: 20rem;
+
+}
+h2{
+	font-size: 6rem;
+
+}
+h3{
+	
+	font-size: 4rem;
+}
+
+h4{
+
+	font-size: 3rem;
+
+}
+h5{
+	font-size: 2rem;
+
+}
+h6{
+	font-size: 1.6rem;
+
+}
+p,li{
+	font-size: 1.8rem;
+}

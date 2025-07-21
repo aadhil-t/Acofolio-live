@@ -1,0 +1,18 @@
+// This file is part of the Acofolio project
+// It contains the main Sass imports for styling the project
+@import "mixins";
+@import "variables";
+@import "default";
+@import "common-blk";
+
+// Importing section styles
+@import "header";
+@import "banner";
+@import "vision-sec";
+@import "show-reel-sec";
+@import "project-sec";
+@import "Why-choose-sec";
+@import "shelter-sec";
+@import "contact-sec";
+@import "footer-sec";
+
