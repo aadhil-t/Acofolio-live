@@ -7,6 +7,9 @@
                 height: 777px;
                 display: block;
                 object-fit: fill;
+                @media (max-width: 600px) {
+                    object-fit: cover;
+                }
             }
             .content-block{
                 display: flex;
@@ -15,11 +18,19 @@
                 align-items: center;
                 position: absolute;
                 padding: 120px 85px 158px 85px;
-                background: $whiteopacity-95;
+                background: rgba(255, 255, 255, 0.95);
                 transform: translate(-50%, -50%);
                 top: 70%;
                 left: 50%;
                 z-index: 1;
+                @media (max-width: 1024px) {
+                    background: rgba(255, 255, 255, 0.95);
+                    padding: 60px 60px 60px 60px;
+                    top: 50%;
+                }
+                @media (max-width: 770px) {
+                    width: 100%;
+                }
                 h2{
                     font-family: Inter;
                     font-weight: 400;
@@ -27,8 +38,12 @@
                     font-size: 6rem;
                     line-height: 6.5rem;
                     letter-spacing: 0%;
+                    color: #0D0C0C;
                     text-align: center;
-                    color: $primary-color;
+                    @media (max-width: 1024px) {
+                        font-size: 4rem;
+                        line-height: 4.5rem;
+                    }
                 }
                 .bold-txt{
                     font-family: Inter;
@@ -38,6 +53,10 @@
                     line-height: 6.5rem;
                     letter-spacing: 0%;
                     text-align: center;
+                      @media (max-width: 1024px) {
+                        font-size: 4rem;
+                        line-height: 4.5rem;
+                    }
                 }
                 .features-list{
                     margin: 0;
@@ -50,10 +69,14 @@
                       line-height: 60px;
                       letter-spacing: 0;
                       text-align: center;
-                      color: $black-color-1;
+                      color: #1E1E1E;
                       list-style: none;
                       cursor: pointer;
                       transition: color 0.3s ease, font-weight 0.3s ease;
+                      @media (max-width: 1024px) {
+                          font-size: 25px;
+                          line-height: 50px;
+                      }
                       &:hover {
                         color: #000;
                         font-weight: 600; 

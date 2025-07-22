@@ -11,33 +11,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="/js/script.js"></script>
     <title>Acofolio</title>
 </head>
 
 <body>
-    <!-- header section -->
-    <!-- <header class="header-section">
-        <div class="container">
-            <div class="header-inner">
-                <div class="logo">
-                    <a href="#"><img src="/images/logo.svg" alt=""></a>
 
-                </div>
-                <nav class="main-nav">
-                    <a href="#" class="contact-btn">
-                        <span class="dot"></span>
-                        <span class="text">Connect Now</span>
-                        <span class="arrow">
-                          <img src="/images/btn-arrow.svg" alt="arrow" />
-                        </span>
-                    </a>
-                </nav>
-            </div>
-        </div>
-        </div>
-    </header> -->
 <header class="header-section">
   <div class="container">
     <div class="header-inner">
@@ -78,38 +64,41 @@
 
 
     <!-- main content -->
-    <section class="banner-section">
-        <div class="banner-bg">
-            <div class="banner-overlay">
-                <div class="banner-content">
-                    <h1>Your Evolution Begins</h1>
-                </div>
-
-                <div class="banner-bottom">
-                    <div class="container">
-                        <div class="banner-bottom-inner">
-                            <div class="trust-info">
-                                <img src="/images/star-icon.svg" alt="star-icon">
-                                <div>
-                                    <h5>Trust with <strong>10M+</strong></h5>
-                                    <h5>People House</h5>
-                                </div>
-                            </div>
-                            <div class="awards">
-                                <img src="/images/award1.svg" alt="Award 1">
-                                <img src="/images/award2.svg" alt="Award 2">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="banner-section">
+  <div class="banner-bg">
+    <div class="banner-overlay">
+      <div class="scroll-text-wrapper">
+        <div class="scroll-text">
+          <span>Your Evolution Begins</span>
         </div>
-    </section>
+      </div>
+
+      <div class="banner-bottom">
+        <div class="container">
+          <div class="banner-bottom-inner">
+            <div class="trust-info" data-aos="fade-right">
+              <img src="/images/star-icon.svg" alt="star-icon" />
+              <div>
+                <h5>Trust with <strong>10M+</strong></h5>
+                <h5>People House</h5>
+              </div>
+            </div>
+            <div class="awards" data-aos="fade-left" >
+              <img src="/images/award1.svg" alt="Award 1" />
+              <img src="/images/award2.svg" alt="Award 2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section class="section-showreel">
         <div class="outer">
             <div class="container">
-                <div class="content-part">
+                <div class="content-part" data-aos="fade-up">
                     <h2>Home isn’t just a place—<span class="bold-txt">it’s an evolution</span><span class="dot"></span>
                     </h2>
                     <div class="cnt-left">
@@ -124,12 +113,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="showreel-part" onclick="playVideo()">
-                    <div class="showreel-video" id="video-container">
+                <div class="showreel-part" onclick="playVideo()" >
+                    <div class="showreel-video" id="video-container" data-aos="fade-up">
                       <img src="/images/showreel-img.png" alt="Showreel Thumbnail" class="video-thumbnail" />
                       <div class="overlay-text">
                           <span></span>
-                          <h2>Play Showreel</h2>
+                          <h2 data-aos="fade-left">Play Showreel</h2>
                       </div>
                     </div>
                 </div>
@@ -140,9 +129,9 @@
     <section class="section-Vision">
         <div class="outer">
             <div class="container">
-                <div class="vision-content">
+                <div class="vision-content" data-aos="fade-up">
                     <h1>Our Vision</h1>
-                    <h3>To craft living spaces that reflect the progress of humanity—from primal survival to purposeful living.
+                    <h3 data-aos="fade-left">To craft living spaces that reflect the progress of humanity—from primal survival to purposeful living.
                         We believe in homes that honor your journey, upgrade your lifestyle, and empower your future.
                     </h3>
                 </div>
@@ -154,38 +143,40 @@
         <div class="outer">
             <div class="container">
                 <div class="quote-block">
-                  <img src="/images/cave.jpg" alt="Cityscape" class="quote-image" />
+                  <img data-aos="fade-up" src="/images/cave.jpg" alt="Cityscape" class="quote-image" />
                   <div class="quote-text">
                     <div class="quote">
-                        <h2>"Caves kept us alive. </h2>
-                        <h2>Cities make us thrive."</h2>
+                        <h2 data-aos="fade-left">"Caves kept us alive. </h2>
+                        <h2 data-aos="fade-right">Cities make us thrive."</h2>
                     </div>
-                    <p>
-                      Long ago, a cave meant shelter, safety, and warmth. It was a beginning.
-                      But you've come far since then. You now crave more—light, connection,
-                      comfort, and style.
-                    </p>
-                    <a class="know-more-btn" href="#">
-                         <span class="dot"></span>
-                         <span class="text">Know more</span>
-                    </a>
+                    <div>
+                        <p data-aos="fade-up">
+                          Long ago, a cave meant shelter, safety, and warmth. It was a beginning.
+                          But you've come far since then. You now crave more—light, connection,
+                          comfort, and style.
+                        </p>
+                        <a class="know-more-btn" href="#" data-aos="fade-left">
+                             <span class="dot"></span>
+                             <span class="text">Know more</span>
+                        </a>
+                    </div>
                   </div>
                 </div>
               
                 <div class="projects-heading">
-                  <h1>Projects</h1>
-                  <p>Explore our range of thoughtfully designed living spaces</p>
+                  <h1 data-aos="flip-left">Projects</h1>
+                  <p data-aos="fade-up">Explore our range of thoughtfully designed living spaces</p>
                 </div>
             </div>
             <!-- Project 1 -->
-            <div class="project-item">
+            <div class="project-item" data-aos="fade-up">
                <div class="text-block">
                  <div class="number">01</div>
                  <div class="details">
                    <h2>StoneRise Residences</h2>
                    <h5>Nature-inspired homes with a futuristic edge.</h5>
                  </div>
-                 <button class="arrow-btn">➜</button>
+                 <img class="acco-img" src="/images/accordian-icon.svg" alt="">
                </div>
                <div class="image-block">
                  <img src="/images/project-item1.png" alt="StoneRise Residences">
@@ -193,29 +184,29 @@
              </div>
            
              <!-- Project 2 -->
-             <div class="project-item">
+             <div class="project-item" data-aos="fade-up">
                <div class="text-block">
                  <div class="number">02</div>
                  <div class="details">
                    <h2>MetroNest</h2>
                    <h5>Smart apartments in the city's tech corridors.</h5>
-                 </div>
-                 <button class="arrow-btn">➜</button>
-               </div>
+                </div>
+                <img class="acco-img" src="/images/accordian-icon.svg" alt="">
+                </div>
                <div class="image-block">
                  <img src="/images/project-item1.png" alt="Skyline Echo">
                </div>
              </div>
            
              <!-- Project 3 -->
-            <div class="project-item">
+            <div class="project-item" data-aos="fade-up">
                <div class="text-block">
                  <div class="number">03</div>
                  <div class="details">
                    <h2>UrbanCave Villas</h2>
                    <h5>A nod to our roots, with modern luxury built in.</h5>
                  </div>
-                 <button class="arrow-btn">➜</button>
+                 <img class="acco-img" src="/images/accordian-icon.svg" alt="">
                </div>
                <div class="image-block">
                  <img src="/images/project-item1.png" alt="Azure Grove Villas">
@@ -229,9 +220,9 @@
     <div class="outer">
         <div class="image-block">
             <img src="/images/why-choose.png" alt="" class="why-choose-bgimage">
-            <div class="content-block">
-                <h2>Why Choose <br> <span class="bold-txt">Urb</span><span class="dot"></span><span class="bold-txt">rise?</span></h2>
-                <ul class="features-list">
+            <div class="content-block" >
+                <h2 data-aos="flip-up">Why Choose <br> <span class="bold-txt">Urb</span><span class="dot"></span><span class="bold-txt">rise?</span></h2>
+                <ul class="features-list" data-aos="flip-up">
                     <li>Human-Centric Design</li>
                     <li>Transparent Processes</li>
                     <li>Prime Locations</li>
@@ -253,22 +244,22 @@
     </div>
 
     <!-- Testimonials -->
-    <div class="testimonial card-top-left">
+    <div class="testimonial card-top-left" data-aos="fade-up">
       <p>“From a cramped rental to my own smart home—Urbrise made it feel like I’ve stepped out of the cave into the future.”</p>
       <h6>– Riya Menon, Bengaluru</h6>
     </div>
 
-    <div class="testimonial card-top-right">
+    <div class="testimonial card-top-right" data-aos="fade-up">
       <p>“Every Urbrise home feels like a leap in time—from primitive to premium.”</p>
       <h6>– Daniel Hoffmann, Berlin</h6>
     </div>
 
-    <div class="testimonial card-bottom-left">
+    <div class="testimonial card-bottom-left" data-aos="fade-up">
       <p>“The natural aesthetics and futuristic features of my home feel like a perfect balance between earth and evolution.”</p>
       <h6>– Ishita Verma, Gurgaon</h6>
     </div>
 
-    <div class="testimonial card-bottom-right">
+    <div class="testimonial card-bottom-right" data-aos="fade-up">
       <p>“From the first brick to final handover, Urbrise was with us — reliable, transparent, and modern.”</p>
       <h6>– Neha Kapoor, Dubai</h6>
     </div>
@@ -383,6 +374,18 @@ function playVideo() {
 }
 </script>
 
+<!-- banner text -->
+<script>
+  const text = document.querySelector('.scroll-text span');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const scale = Math.min(1 + scrollY / 300, 5); // capped scale
+    text.style.transform = `scale(${scale})`;
+  });
+</script>
+
+
 <!-- project accordian -->
 <script>
   document.querySelectorAll('.project-item').forEach(item => {
@@ -418,6 +421,8 @@ function playVideo() {
   });
 </script>
 
-
+<script>
+  AOS.init();
+</script>
 
 </html>
