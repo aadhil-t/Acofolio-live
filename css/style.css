@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 *,
 *::before,
 *::after {
@@ -111,8 +112,9 @@ p, li {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   background-color: transparent;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .know-more-btn .dot {
   width: 8px;
@@ -120,13 +122,27 @@ p, li {
   background-color: #FFBB01;
   border-radius: 50%;
   display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .know-more-btn .text {
   font-size: 1.4rem;
   font-weight: 500;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .know-more-btn:hover {
-  background-color: rgba(88, 88, 88, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #FFBB01;
+}
+.know-more-btn:hover .dot {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+.know-more-btn:hover .text {
+  color: #FFFFFF;
 }
 
 .dot {
@@ -201,6 +217,55 @@ p, li {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.page-content {
+  padding: 5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.cursor-blob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #93AE18;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  pointer-events: none;
+  z-index: 9999;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cursor-text {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cursor-text .highlight {
+  width: 5px;
+  height: 5px;
+  background-color: #FFBB01;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .header-section {

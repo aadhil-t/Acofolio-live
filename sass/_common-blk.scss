@@ -8,11 +8,12 @@
   border: 1px solid #585858;
   border-radius: 3rem;
   text-decoration: none;
-  color: $white-color; // Adjust to white if used on dark background
+  color: $white-color;
   font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
   .dot {
     width: 8px;
@@ -20,17 +21,30 @@
     background-color: $yellow-color;
     border-radius: 50%;
     display: inline-block;
+    transition: transform 0.3s ease;
   }
 
   .text {
     font-size: 1.4rem;
     font-weight: 500;
+    transition: color 0.3s ease;
   }
 
   &:hover {
-    background-color: rgba(88, 88, 88, 0.1); // optional hover effect
+    background-color: rgba(255, 255, 255, 0.1); // subtle light overlay
+    border-color: $yellow-color;
+    // color: $yellow-color;
+
+    .dot {
+      transform: scale(1.4); // slightly enlarge the dot
+    }
+
+    .text {
+      color: $white-color;
+    }
   }
 }
+
 
 // common span dot //
   .dot {
@@ -98,4 +112,52 @@
 }
 
 
-    
+// bubble //
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+
+// Page Content
+.page-content {
+  padding: 5rem;
+  z-index: 1;
+  position: relative;
+}
+
+// Blob Styles
+.cursor-blob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #93AE18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+
+.cursor-text {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+
+
+  .highlight {
+    width: 5px;
+    height: 5px;
+    background-color: #FFBB01;
+    border-radius: 50%;
+    display: inline-block;
+  }
+}
