@@ -66,7 +66,10 @@
 
     .info-link {
       color: #aaa;
-
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
       .arrow {
         font-size: 1rem;
         margin-left: 0.4rem;
@@ -79,7 +82,16 @@
 
     .phone-number {
       color: #fff;
-      font-weight: 500;
+      font-family: Inter;
+      font-weight: 300;
+      font-style: Light;
+      font-size: 25px;
+      line-height: 27px;
+      letter-spacing: 0%;
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      text-decoration: none;
     }
   }
 }

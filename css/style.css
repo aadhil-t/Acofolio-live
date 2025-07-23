@@ -1505,6 +1505,14 @@ p, li {
 }
 .contact-section .contact-info .info-link {
   color: #aaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 .contact-section .contact-info .info-link .arrow {
   font-size: 1rem;
@@ -1515,7 +1523,20 @@ p, li {
 }
 .contact-section .contact-info .phone-number {
   color: #fff;
-  font-weight: 500;
+  font-family: Inter;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 25px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
 }
 
 .footer-section .outer .foot-bg {
