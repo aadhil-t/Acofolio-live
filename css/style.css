@@ -486,9 +486,12 @@ p, li {
   gap: 8px;
 }
 .banner-section .banner-bg .banner-overlay .banner-bottom .trust-info h5 {
-  font-size: 1.4rem;
+  font-family: Inter;
   font-weight: 400;
-  margin: 0;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0%;
 }
 .banner-section .banner-bg .banner-overlay .banner-bottom .trust-info strong {
   font-weight: 700;
@@ -1616,9 +1619,13 @@ p, li {
 }
 .footer-section .outer .foot-bg .footer-content .brand p {
   color: #ccc;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  max-width: 22rem;
+  font-family: Inter;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 18px;
+  line-height: 31px;
+  letter-spacing: 0%;
+  max-width: 27rem;
 }
 .footer-section .outer .foot-bg .footer-logo {
   font-family: Inter;
