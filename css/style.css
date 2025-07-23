@@ -187,9 +187,13 @@ p, li {
   background-color: #FFBB01;
   border-radius: 50%;
   display: inline-block;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .contact-btn .text {
   line-height: 1;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .contact-btn .contact-arrow {
   background-color: #FFBB01;
@@ -204,19 +208,31 @@ p, li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .contact-btn .contact-arrow .arrow-img {
   width: 25px;
   height: 25px;
   display: block;
-}
-.contact-btn:hover .arrow img {
-  -webkit-transform: translate(2px, -2px);
-          transform: translate(2px, -2px);
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.contact-btn:hover {
+  background-color: #FFBB01;
+  color: #000;
+}
+.contact-btn:hover .dot {
+  background-color: #fff;
+}
+.contact-btn:hover .contact-arrow {
+  background-color: #fff;
+}
+.contact-btn:hover .arrow-img {
+  -webkit-transform: translate(2px, -2px);
+          transform: translate(2px, -2px);
 }
 
 .page-content {

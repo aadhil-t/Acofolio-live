@@ -63,7 +63,54 @@
   }
 
 //  contact now //
-   .contact-btn {
+//    .contact-btn {
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 0.6rem;
+//   padding: 0.4rem 1.5rem;
+//   background-color: #fff;
+//   color: #000;
+//   font-family: 'Inter', sans-serif;
+//   font-size: 1.4rem;
+//   font-weight: 500;
+//   border-radius: 999px;
+//   text-decoration: none;
+//   border: none;
+//   transition: all 0.3s ease;
+
+//   .dot {
+//     width: 8px;
+//     height: 8px;
+//     background-color: #FFBB01;
+//     border-radius: 50%;
+//     display: inline-block;
+//   }
+
+//   .text {
+//     line-height: 1;
+//   }
+
+//   .contact-arrow {
+//     background-color: #FFBB01;
+//     border-radius: 50%;
+//     padding: 0.3rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     .arrow-img {
+//       width: 25px;
+//       height: 25px;
+//       display: block;
+//     }
+//   }
+
+//   &:hover .arrow img {
+//     transform: translate(2px, -2px);
+//     transition: transform 0.3s ease;
+//   }
+// }
+.contact-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -84,10 +131,12 @@
     background-color: #FFBB01;
     border-radius: 50%;
     display: inline-block;
+    transition: background-color 0.3s ease;
   }
 
   .text {
     line-height: 1;
+    transition: color 0.3s ease;
   }
 
   .contact-arrow {
@@ -97,19 +146,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
 
     .arrow-img {
       width: 25px;
       height: 25px;
       display: block;
+      transition: transform 0.3s ease;
     }
   }
 
-  &:hover .arrow img {
-    transform: translate(2px, -2px);
-    transition: transform 0.3s ease;
+  &:hover {
+    background-color: #FFBB01;
+    color: #000; // Ensures text stays visible on yellow background
+
+    .dot {
+      background-color: #fff;
+    }
+
+    .contact-arrow {
+      background-color: #fff;
+    }
+
+    .arrow-img {
+      transform: translate(2px, -2px);
+    }
   }
 }
+
+
 
 
 // bubble //

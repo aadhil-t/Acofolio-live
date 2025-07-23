@@ -490,7 +490,7 @@ function playVideo() {
 </script> -->
 
 <!-- gsap bubble cursor with avoiding a tag  -->
-<script>
+<!-- <script>
 document.addEventListener("DOMContentLoaded", () => {
   const blob = document.querySelector(".cursor-blob");
   const text = document.querySelector(".cursor-text");
@@ -532,6 +532,96 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.ticker.add(() => {
     if (isHoveringLink) return; // Stop blob animation when hovering <a>
+
+    pos.x += (mouse.x - pos.x) * 0.15;
+    pos.y += (mouse.y - pos.y) * 0.15;
+
+    const dx = mouse.x - pos.x;
+    const dy = mouse.y - pos.y;
+
+    const scale = getScale(dx, dy);
+    const angle = getAngle(dx, dy);
+
+    set.x(pos.x);
+    set.y(pos.y);
+    set.width(140 + scale * 180);
+    set.r(angle);
+    set.sx(1 + scale);
+    set.sy(1 - scale);
+    set.rt(-angle);
+  });
+});
+</script> -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const blob = document.querySelector(".cursor-blob");
+  const text = document.querySelector(".cursor-text");
+  if (!blob || !text) return;
+
+  let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  let pos = { x: mouse.x, y: mouse.y };
+  let isHoveringLink = false;
+
+  const set = {
+    x: gsap.quickSetter(blob, "x", "px"),
+    y: gsap.quickSetter(blob, "y", "px"),
+    r: gsap.quickSetter(blob, "rotate", "deg"),
+    sx: gsap.quickSetter(blob, "scaleX"),
+    sy: gsap.quickSetter(blob, "scaleY"),
+    width: gsap.quickSetter(blob, "width", "px"),
+    rt: gsap.quickSetter(text, "rotate", "deg")
+  };
+
+  const getScale = (dx, dy) => Math.min(Math.sqrt(dx ** 2 + dy ** 2) / 735, 0.35);
+  const getAngle = (dx, dy) => (Math.atan2(dy, dx) * 180) / Math.PI;
+
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  // List of selectors where blob should be hidden
+  const excludedSelectors = [
+    "a",
+    "#menuToggle",
+    "#video-container",
+    "video",
+    ".footer-col-blk",
+    ".features-list"
+  ];
+
+  excludedSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        isHoveringLink = true;
+        blob.style.opacity = "0";
+      });
+      el.addEventListener("mouseleave", () => {
+        isHoveringLink = false;
+        blob.style.opacity = "1";
+      });
+    });
+  });
+
+  // Handle dynamically loaded videos too
+  const observer = new MutationObserver(() => {
+    document.querySelectorAll("video").forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        isHoveringLink = true;
+        blob.style.opacity = "0";
+      });
+      el.addEventListener("mouseleave", () => {
+        isHoveringLink = false;
+        blob.style.opacity = "1";
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Animate the blob
+  gsap.ticker.add(() => {
+    if (isHoveringLink) return;
 
     pos.x += (mouse.x - pos.x) * 0.15;
     pos.y += (mouse.y - pos.y) * 0.15;
